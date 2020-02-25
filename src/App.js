@@ -28,8 +28,8 @@ export default function App() {
     // fetchShow();
     fetchShow()
     .then(res => {
-     setShow(res);
-     setSeasons(formatSeasons(res._embedded.episodes));
+     setShow(res.data);
+     setSeasons(formatSeasons(res.data._embedded.episodes));
     })
   }, []);
 
